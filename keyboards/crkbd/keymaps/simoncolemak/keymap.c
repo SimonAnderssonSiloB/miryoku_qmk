@@ -43,10 +43,10 @@ const uint32_t unicode_map[] PROGMEM = {
     [U_OE_U] = 0x00D6,  // Ö
 };
 
-// Use UP(lower, upper) for shift-aware Unicode pairs
-#define DE_AO UP(U_AO_L, U_AO_U)
-#define DE_AE UP(U_AE_L, U_AE_U)
-#define DE_OE UP(U_OE_L, U_OE_U)
+// Use XP(lower, upper) for shift-aware Unicode pairs
+#define DE_AO XP(U_AO_L, U_AO_U)
+#define DE_AE XP(U_AE_L, U_AE_U)
+#define DE_OE XP(U_OE_L, U_OE_U)
 
 // Shortcut defines
 #define U_FND  C(KC_F)          // Find
