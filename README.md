@@ -12,7 +12,9 @@ Custom Colemak DH layouts with Miryoku-style layers for three keyboards.
 
 ## Setup
 
-### 1. Install QMK CLI (macOS)
+### macOS
+
+#### 1. Install QMK CLI
 
 ```sh
 brew install qmk/qmk/qmk
@@ -29,13 +31,35 @@ export PATH="/opt/homebrew/opt/avr-gcc@8/bin:$PATH"
 export PATH="/opt/homebrew/opt/arm-gcc-bin@8/bin:$PATH"
 ```
 
-### 2. Clone and configure
+#### 2. Clone and configure
 
 ```sh
 git clone git@github.com:SimonAnderssonSiloB/miryoku_qmk.git
 cd miryoku_qmk
 qmk setup -H .
 ```
+
+---
+
+### Windows
+
+The easiest approach is [QMK MSYS](https://github.com/qmk/qmk_distro_msys/releases/latest) — a single installer that bundles MSYS2, the ARM/AVR compilers, and the QMK CLI. No separate toolchain installation needed.
+
+#### 1. Install QMK MSYS
+
+Download and run the latest `QMK_MSYS.exe` installer from the link above, then open the **QMK MSYS** terminal it creates.
+
+#### 2. Clone and configure
+
+```sh
+git clone git@github.com:SimonAnderssonSiloB/miryoku_qmk.git
+cd miryoku_qmk
+qmk setup -H .
+```
+
+#### Flashing on Windows
+
+`qmk flash` works inside QMK MSYS, but if you hit driver issues use [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases/latest) instead: build the firmware with `qmk compile`, then open the resulting `.hex` / `.uf2` file in QMK Toolbox and flash from there.
 
 ## Build
 
