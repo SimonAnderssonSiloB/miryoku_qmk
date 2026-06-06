@@ -5,8 +5,8 @@
 #define TAPPING_TERM 200
 #define PERMISSIVE_HOLD
 
-// Unicode input mode (change to UNICODE_MODE_WINCOMPOSE for Windows with WinCompose)
-#define UNICODE_SELECTED_MODES UNICODE_MODE_MACOS, UNICODE_MODE_WINCOMPOSE, UNICODE_MODE_LINUX
+// Default: WinCompose (Windows). Cycle with UC_NEXT: WinCompose → macOS → Linux
+#define UNICODE_SELECTED_MODES UNICODE_MODE_WINCOMPOSE, UNICODE_MODE_MACOS, UNICODE_MODE_LINUX
 
 // Mouse key settings
 #define MOUSEKEY_DELAY 0

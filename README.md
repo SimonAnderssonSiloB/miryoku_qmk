@@ -57,6 +57,12 @@ cd miryoku_qmk
 qmk setup -H .
 ```
 
+#### Swedish characters (å, ä, ö) on Windows
+
+The firmware defaults to `UNICODE_MODE_WINCOMPOSE`. Install [WinCompose](https://github.com/samhocevar/wincompose/releases/latest) (free, one-time) and the Swedish keys will work out of the box. No configuration needed beyond running it.
+
+On macOS or Linux, press `UC_NEXT` (MISC layer, middle thumb row) to cycle to the right unicode mode for your OS.
+
 #### Flashing on Windows
 
 `qmk flash` works inside QMK MSYS, but if you hit driver issues use [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases/latest) instead: build the firmware with `qmk compile`, then open the resulting `.hex` / `.uf2` file in QMK Toolbox and flash from there.
